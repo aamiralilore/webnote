@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="static/favicon.ico">
+</head>
+<body>
+    <div id="main">
+        <div id="content">
+            
+        </div>
+        <h2>
+            <input type="text" placeholder="Add Note" id="text"><br><br>
+            <input type="button" value="Add Item" id="additem">
+        </h2>
+    </div>
+
+    <form class="form_search" action="/search" method="get">
+        <input class="form_input" id="searchNote" type="text" name="q" placeholder="Search...">
+        <input class="form_button" id="searchButton" type="submit" value="Search">
+    </form>
+
+    <form class="form_create" action="/addnote" method="post">
+        {$$ SUBMITTED $$}
+        <input class="form_text" id="createNote" name="new_note" placeholder="Add your note's text here...">
+        <input class="form_button" id="createButton" type="submit" value="Create Note">
+    </form>
+
+    <div class="form notes__link"> <a class = "menu" href="/all_notes">
+        <input type="button" value="View all notes!">
+    </a>
+    </div>
+    <script src="static/script.js"></script>
+
+</body>
+</html>
